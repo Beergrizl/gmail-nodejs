@@ -3,7 +3,7 @@ const cors = require('cors');
 const nodemailer = require("nodemailer");
 const bodyParser = require('body-parser')
 const app = express()
-let port = process.env.PORT || 3010;
+
 
 app.use(cors());
 
@@ -41,7 +41,7 @@ let info = await transporter.sendMail({
 })
     res.send('yoyoyo')
 })
-
+let port = process.env.PORT || 3010;
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
